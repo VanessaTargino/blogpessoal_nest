@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
@@ -96,3 +97,35 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+=======
+# Blog Pessoal - CRUD com NestJS
+
+Este projeto faz parte da atividade prática **WEB-JS-2** do curso Generation Brasil, com o objetivo de desenvolver um CRUD para um Blog Pessoal utilizando o framework **NestJS**.
+
+## ✅ Resumo do projeto
+
+O projeto consiste na construção de uma API para gerenciamento de postagens de um blog pessoal. Foram implementados:
+
+- **Configuração inicial do NestJS** e do ambiente de desenvolvimento.
+- **Conexão ao banco de dados MySQL** (`db_blogpessoal`) usando TypeORM.
+- **Criação do recurso Postagem**, incluindo:
+  - Entidade `Postagem` mapeando a tabela `tb_postagens`.
+  - Módulo `PostagemModule` para organização do recurso.
+  - Serviço `PostagemService` contendo a regra de listagem de postagens.
+  - Controlador `PostagemController` para expor a rota de consulta.
+- Testes via Insomnia e inserção de dados através do MySQL Workbench.
+- Versionamento completo do projeto no GitHub, atendendo aos padrões exigidos pela Generation Brasil.
+
+## 🚀 Tecnologias utilizadas
+
+- [NestJS](https://nestjs.com/)
+- TypeScript
+- MySQL
+- Insomnia (testes de API)
+- Node.js
+- Git e GitHub
+
+🧑‍💻 Autora
+
+[Vanessa Targino](https://github.com/VanessaTargino)
+>>>>>>> 6740d740693ed25f9275865445b9533c4167a7fb
