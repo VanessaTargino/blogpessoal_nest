@@ -21,9 +21,7 @@ export class TemaService {
   async findById(id: number): Promise<Tema> {
     const tema = await this.temaRepository.findOne({
       where: { id },
-      relations: {
-        postagem: true,
-      },
+      relations: { postagem: true },
     });
 
     if (!tema)
@@ -53,6 +51,7 @@ export class TemaService {
   }
   async delete(id: number): Promise<DeleteResult> {
     await this.findById(id);
+
     return await this.temaRepository.delete(id);
   }
 }

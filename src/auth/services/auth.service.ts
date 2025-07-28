@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { JwtService } from '@nestjs/jwt';
-import { UsuarioService } from '../../usuario/services/usuario.service';
+import { UsuarioService } from './../../usuario/services/usuario.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Bcrypt } from '../bcrypt/bcrypt';
 import { UsuarioLogin } from '../entities/usuariologin.entity';
@@ -20,8 +19,8 @@ export class AuthService {
       throw new HttpException('Usuário não encontrado!', HttpStatus.NOT_FOUND);
 
     const matchPassword = await this.bcrypt.compararSenhas(
-      password,
       buscaUsuario.senha,
+      password,
     );
 
     if (buscaUsuario && matchPassword) {
@@ -38,10 +37,6 @@ export class AuthService {
     const buscaUsuario = await this.usuarioService.findByUsuario(
       usuarioLogin.usuario,
     );
-
-    if (!buscaUsuario) {
-      throw new HttpException('Usuário não encontrado!', HttpStatus.NOT_FOUND);
-    }
 
     return {
       id: buscaUsuario.id,
